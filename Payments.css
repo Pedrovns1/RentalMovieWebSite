@@ -64,6 +64,22 @@ header {
     box-shadow: 0 5px 10px #000;
 }
 
+/* Adicione este estilo ao seu arquivo Payments.css */
+.container {
+    position: relative;
+}
+
+.exit-btn {
+    position: absolute;
+    top: 10px; /* Ajuste conforme necessário para a posição vertical desejada dentro do container */
+    right: 10px; /* Ajuste conforme necessário para a posição horizontal desejada dentro do container */
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
 .container form .row {
     display: flex;
     flex-wrap: wrap;
