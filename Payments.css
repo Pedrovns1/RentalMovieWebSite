@@ -64,15 +64,15 @@ header {
     box-shadow: 0 5px 10px #000;
 }
 
-/* Adicione este estilo ao seu arquivo Payments.css */
+
 .container {
     position: relative;
 }
 
 .exit-btn {
     position: absolute;
-    top: 10px; /* Ajuste conforme necessário para a posição vertical desejada dentro do container */
-    right: 10px; /* Ajuste conforme necessário para a posição horizontal desejada dentro do container */
+    top: 10px; 
+    right: 10px; 
     padding: 10px;
     background-color: #333;
     color: #fff;
@@ -145,4 +145,62 @@ header {
 
 .container form .submit-btn:hover {
     background: #23232e;
+}
+.hamburger {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+}
+
+.hamburger::after,
+.hamburger::before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    header {
+        width: 100%; /* Adjust the minimum height for smaller screens */
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-list {
+        display: none; /* Hide the regular navigation items when hamburger is visible */
+        flex-direction: column;
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 100%;
+        background: #23232e;
+        text-align: center;
+    }
+
+    .nav-list.active {
+        display: flex; /* Show the navigation items when the hamburger menu is active */
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
 }
